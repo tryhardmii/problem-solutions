@@ -1,0 +1,11 @@
+# Top K Frequent Elements
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        hashmap = {}
+        if len(nums) == 1:
+            return nums
+        else:
+            for num in nums:
+                hashmap[num] = hashmap.get(num, 0) + 1
+        hashmap = sorted(hashmap.items(), key = lambda x:x[1], reverse = True)
+        return ([x[0] for x in hashmap][0:k])
