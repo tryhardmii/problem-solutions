@@ -1,0 +1,17 @@
+#CCC '14 J2 - Vote Count
+n = int(input())
+A = 0
+B = 0
+votes = input()
+for vote in votes:
+    if vote == 'A':
+        A = A + 1 
+    else:
+        B = B + 1
+
+if A > B:
+    print("A")
+elif B > A:
+    print("B")
+else:
+    print("Tie")

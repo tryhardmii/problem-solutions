@@ -1,0 +1,9 @@
+# Fast Factorial Calculator
+import math
+i = int(input())
+for n in range(i):
+    t = int(input())
+    if t >= 34:
+        print(0)
+    else:
+        print(math.factorial(t) % 4294967296)

@@ -1,0 +1,40 @@
+// CCC '13 S1 - From 1987 to 2013
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int checkvalid(int digits[], int len){
+    for (int n = 0; n < len-1; n++){
+        //printf("%i\n", n);
+        for (int i = n+1; i < len; i++){
+            if ((int)digits[n] == (int)digits[i]){
+                return 0;
+            }
+            //printf("%i %i\n", n, i);
+        }
+    }
+    return 1;
+}
+
+int main()
+{
+    int year;
+    int valid = 1;
+    scanf("%i", &year);
+    int digits[5];
+    
+    do{
+        year++;
+        for (int n = 0; n < (int)log10(year) + 1; n++){
+            digits[n] = (int)(year/pow(10, n)) % 10;
+            //printf("%i ", digits[n]);
+        }
+        if (checkvalid(digits, (int)log10(year) + 1) == 1){
+            printf("%i", year);
+            return 0;
+        }
+    } while(1);
+
+}

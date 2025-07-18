@@ -1,0 +1,21 @@
+# CCC '11 S1 - English or French?
+import sys
+
+a = input("")
+lines = int(a)
+english = 0
+french = 0
+n = 0
+while n != lines:
+    text = input("")
+    for letter in text:
+        if letter == 's' or letter == 'S':
+            french = french + 1
+        if letter == 't' or letter == 'T':
+            english = english + 1
+    n = n + 1
+    
+if english > french:
+    print ("English")
+else:
+    print ("French")

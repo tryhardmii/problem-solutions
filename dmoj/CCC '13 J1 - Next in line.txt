@@ -1,0 +1,11 @@
+//CCC '13 J1 - Next in line
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int young, middle;
+    scanf("%i\n", &young);
+    scanf("%i\n", &middle);
+    printf("%i\n", (middle - young) + middle);
+    return 0;
+}

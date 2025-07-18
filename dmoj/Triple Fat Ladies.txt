@@ -1,0 +1,17 @@
+# Triple Fat Ladies
+import math
+list=[]
+cubes=[]
+n=int(input())
+for i in range(n):
+    k=int(input())
+    list.append(k)
+for number in list:
+    while True:
+        if (number**3)%1000==888:
+            cubes.append(number)
+            break
+        else:
+            number+=1
+for number in cubes:
+    print(number)

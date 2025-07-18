@@ -1,0 +1,19 @@
+# CCC '23 S1 - Trianglane 
+sides = 0
+area = [[],[]]
+C = int(input())
+for i in range(2):
+    area[i] = input().split(" ")
+for i in range(2):
+    for n in range(C):
+        if area[i][n] == '1':
+            sides += 3
+for n in range(C-1):
+    if area[0][n] == '1' and area[0][n+1] == '1':
+        sides -= 2
+    if area[1][n] == '1' and area[1][n+1] == '1':
+        sides -= 2
+for n in range(C):
+    if area[0][n] == '1' and area[1][n] == '1' and n % 2 == 0:
+        sides -= 2
+print(sides)

@@ -1,0 +1,8 @@
+#Sorting
+s = []
+count = int(input())
+for a in range(count):
+    s.append(int(input()))
+s.sort()
+for t in s:
+    print(t)

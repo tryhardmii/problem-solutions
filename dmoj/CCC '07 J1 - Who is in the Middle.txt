@@ -1,0 +1,22 @@
+//CCC '07 J1 - Who is in the Middle? 
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a, b, c;
+    scanf("%i", &a);
+    scanf("%i", &b);
+    scanf("%i", &c);
+    
+    if (a > b && a > c)
+    {
+        if (b > c) printf("%i", b);
+        else printf("%i", c);
+    }
+    else if (a < b && a < c) 
+    {
+        if (b > c) printf("%i", c);
+        else printf("%i", b);
+    }
+    else printf("%i", a);
+}

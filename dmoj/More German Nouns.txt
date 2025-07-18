@@ -1,0 +1,12 @@
+# More German Nouns
+
+lines = int(input())
+notletters = [" ", "!", "?", ",", "."]
+for i in range(lines):
+    sentence = input()
+    for char in notletters:
+        sentence = sentence.replace(char, " ")
+    sentence = sentence.split(" ")
+    for word in sentence:
+        if word.istitle() == True:
+            print(word)
