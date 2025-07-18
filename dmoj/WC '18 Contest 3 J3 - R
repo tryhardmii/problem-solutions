@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+int main(void)
+{
+	int s;
+	scanf("%i", &s);
+		for (int c = 0; c < s-1; c++) printf("#"); printf("."); printf("\n");
+		for (int c = 0; c < s-2; c++)
+		{
+			printf("#"); for (int c = 0; c < s-2; c++) printf("."); printf("#"); printf("\n");			
+		}
+		for (int c = 0; c < s-1; c++) printf("#"); printf("."); printf("\n");		
+		for (int c = 0; c < s-1; c++) 
+		{
+			printf("#"); for (int n = 0; n < c; n++) printf("."); printf("#"); 
+			for (int n = 0; n < (s-2-c); n++) printf(".");
+			printf("\n");
+		}
+		return 0;
+}
